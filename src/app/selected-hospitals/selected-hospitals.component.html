@@ -1,0 +1,19 @@
+<div *ngIf="selectedHospitals.length > 0" class="selected-hospitals">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                {{titleSelectedHospitals}}
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-list>
+                <mat-selection-list [(ngModel)]="selectedHospital" (ngModelChange)="setSelectedHospital($event)" [multiple]="false">
+                    <mat-list-option  *ngFor="let hospital of selectedHospitals" [value]="hospital.name">
+                        <h3 matLine>{{hospital.name}}</h3>
+                        <p matLine>Wait Time: {{hospital.waitTime}}</p>
+                    </mat-list-option>
+                </mat-selection-list>
+            </mat-list>
+        </mat-card-content>
+    </mat-card>
+</div>

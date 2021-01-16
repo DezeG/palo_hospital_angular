@@ -1,0 +1,19 @@
+<div class="select-level-of-pain">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                {{titleSelectLevelOfPain}}
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-radio-group
+                class="radio-group"
+                [(ngModel)]="selectedLevelOfPain"
+                (ngModelChange)="setLevelOfPain($event)">
+                <mat-radio-button class="radio-button" aria-label="bottom" *ngFor="let levelOfPain of levelsOfPain" [value]="levelOfPain">
+                    <mat-icon>{{levelOfPain.emotion}}</mat-icon>
+                </mat-radio-button>
+            </mat-radio-group>
+        </mat-card-content>
+    </mat-card>
+</div>

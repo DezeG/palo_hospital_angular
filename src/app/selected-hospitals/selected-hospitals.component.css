@@ -1,0 +1,21 @@
+.selected-hospitals {
+    margin: 10%;
+    width: 40%;
+    min-width: 250px;
+  }
+
+.card {
+  display: inline-flex;
+  justify-content: left;
+  align-items: left;
+}
+
+.card-header {
+  float: left;
+  text-align: left;
+}
+
+.card-content {
+  float: left;
+  text-align: left;
+}

@@ -1,0 +1,16 @@
+<div *ngIf="illnesses.length > 0" class="select-illness">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                {{titleSelectIllness}}
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-selection-list [(ngModel)]="selectedIllness" (ngModelChange)="setSelectedIllness($event)" [multiple]="false">
+                <mat-list-option *ngFor="let illness of illnesses" [value]="illness.name">
+                    {{illness.name}}
+                </mat-list-option>
+            </mat-selection-list>
+        </mat-card-content>
+    </mat-card>
+</div>
