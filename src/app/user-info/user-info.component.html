@@ -11,7 +11,7 @@
                 <input matInput [formControl]="name" required>
                 <mat-error *ngIf="name.invalid">{{getErrorMessage()}}</mat-error>
             </mat-form-field>
-            <button mat-flat-button color="primary" (click)="onClick()">Submit</button>
+            <button mat-flat-button color="primary" (click)="onClick()" [disabled]="!name.valid">Submit</button>
         </mat-card-content>
     </mat-card>
 </div>  
